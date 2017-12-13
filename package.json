@@ -1,0 +1,62 @@
+{
+  "name": "gittoken-react-components",
+  "version": "0.0.1",
+  "description": "GitToken React Components",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "mocha",
+    "start:dev": "npx webpack-dev-server --hot --inline",
+    "build:ui": "npx webpack --config webpack.config.js",
+    "build:src": "npx babel ./src/ --out-dir ./dist/ --plugins transform-react-jsx"
+  },
+  "keywords": [
+    "GitToken",
+    "Ethereum",
+    "Solidity",
+    "Git",
+    "Token",
+    "ERC20",
+    "React",
+    "Registry"
+  ],
+  "author": "Ryan Tate <ryan.tate@gittoken.io>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "ethereumjs-tx": "^1.3.3",
+    "github-api": "^3.0.0",
+    "gittoken-contracts": "0.0.46",
+    "gittoken-reducers": "0.0.4",
+    "gittoken-registry-ui": "0.0.13",
+    "gittoken-svg-icons": "0.0.7",
+    "gittoken-web-workers": "0.0.60",
+    "history": "^4.7.2",
+    "react": "^16.0.0",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.0.0",
+    "react-draggable": "^3.0.3",
+    "react-icons": "^2.2.7",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "victory": "^0.24.0",
+    "web3": "^0.20.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "babel-plugin-inline-import": "^2.0.6",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "file-loader": "^1.1.5",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3",
+    "worker-loader": "^1.0.0"
+  }
+}
