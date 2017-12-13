@@ -12,7 +12,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _index = require('../actions/index');
+var _reactRedux = require('react-redux');
+
+var _reactBootstrap = require('react-bootstrap');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22,40 +24,52 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _ref = _jsx('h1', {}, void 0, 'Account Menu');
+var _ref = _jsx(_reactBootstrap.Button, {
+  bsStyle: 'link'
+}, void 0, _jsx('a', {
+  href: 'https://github.com/git-token',
+  target: '_blank'
+}, void 0, 'What is GitToken?'));
 
-var AccountMenuComponent = function (_Component) {
-  _inherits(AccountMenuComponent, _Component);
+var _ref2 = _jsx(_reactBootstrap.Button, {
+  bsStyle: 'link'
+}, void 0, _jsx('a', {
+  href: 'https://github.com/git-token',
+  target: '_blank'
+}, void 0, 'GitHub'));
 
-  function AccountMenuComponent() {
-    _classCallCheck(this, AccountMenuComponent);
+var MenuComponent = function (_Component) {
+  _inherits(MenuComponent, _Component);
 
-    return _possibleConstructorReturn(this, (AccountMenuComponent.__proto__ || Object.getPrototypeOf(AccountMenuComponent)).call(this));
+  function MenuComponent() {
+    _classCallCheck(this, MenuComponent);
+
+    return _possibleConstructorReturn(this, (MenuComponent.__proto__ || Object.getPrototypeOf(MenuComponent)).call(this));
   }
 
-  _createClass(AccountMenuComponent, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var dispatch = this.props.dispatch;
-
-
-      dispatch(_index.accountActions.getProfile());
-    }
-  }, {
+  _createClass(MenuComponent, [{
     key: 'render',
     value: function render() {
-      return _ref;
+
+      return _jsx('div', {
+        style: {
+          margin: '5px',
+          marginTop: '25px',
+          float: 'right'
+        }
+      }, void 0, _jsx(_reactBootstrap.ButtonGroup, {}, void 0, _ref, _ref2));
     }
   }]);
 
-  return AccountMenuComponent;
+  return MenuComponent;
 }(_react.Component);
 
-exports.default = AccountMenuComponent;
-
-
-var mapStateToProps = function mapStateToProps(store, props) {
+var mapStoreToProps = function mapStoreToProps(store, props) {
   return {
-    account: store.account
+    Actions: store.Actions
   };
 };
+
+var Menu = (0, _reactRedux.connect)(mapStoreToProps)(MenuComponent);
+
+exports.default = Menu;

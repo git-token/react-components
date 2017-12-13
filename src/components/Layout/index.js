@@ -1,11 +1,9 @@
-import Footer from './Footer.jsx'
-import Header from './Header.jsx'
-import LeftSideNav from './LeftSideNav.jsx'
-import RightSideNav from './RightSideNav.jsx'
+import Header from './Header'
+import ProfileIcon from './ProfileIcon'
+import Menu from './Menu'
 
 export {
-  Footer,
-  Header,
-  LeftSideNav,
-  RightSideNav
+  Menu,
+  ProfileIcon,
+  Header
 }

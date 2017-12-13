@@ -20,7 +20,7 @@ const store = createStore(
     router: routerReducer
   }),
   applyMiddleware(middleware),
-  applyMiddleware(thunk)
+  applyMiddleware(thunk),
 )
 
 export {

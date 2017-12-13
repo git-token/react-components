@@ -14,33 +14,19 @@ var _reactRedux = require('react-redux');
 
 var _reactRouterDom = require('react-router-dom');
 
-var _web = require('web3');
-
-var _web2 = _interopRequireDefault(_web);
-
 var _index = require('./components/index');
 
 var _store = require('./store');
 
-var _app = require('../app.config');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _ref = _jsx(_reactRouterDom.BrowserRouter, {}, void 0, _jsx(_reactRedux.Provider, {
+var Header = _index.Layout.Header;
+
+
+_reactDom2.default.render(_jsx(_reactRouterDom.BrowserRouter, {}, void 0, _jsx(_reactRedux.Provider, {
   store: _store.store
 }, void 0, _jsx('div', {}, void 0, _jsx(_reactRouterDom.Switch, {}, void 0, _jsx(_reactRouterDom.Route, {
   exact: true,
   path: '/',
-  component: _index.Main
-})))));
-
-window.addEventListener('load', function () {
-
-  if (typeof window.web3 !== 'undefined') {
-    window.web3 = new _web2.default(window.web3.currentProvider);
-  } else {
-    window.web3 = new _web2.default(new _web2.default.providers.HttpProvider(_app.web3Provider));
-  }
-
-  _reactDom2.default.render(_ref, document.getElementById('app'));
-});
+  component: Header
+}))))), document.getElementById('app'));

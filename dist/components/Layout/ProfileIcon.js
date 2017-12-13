@@ -14,71 +14,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = require('react-redux');
 
-var _reactDraggable = require('react-draggable');
-
-var _reactDraggable2 = _interopRequireDefault(_reactDraggable);
-
 var _reactBootstrap = require('react-bootstrap');
-
-var _RegistryLogo = require('gittoken-svg-icons/dist/RegistryLogo');
-
-var _RegistryLogo2 = _interopRequireDefault(_RegistryLogo);
-
-var _MainLogo = require('gittoken-svg-icons/dist/MainLogo');
-
-var _MainLogo2 = _interopRequireDefault(_MainLogo);
-
-var _Register = require('gittoken-registry-ui/dist/components/Register/Register');
-
-var _Register2 = _interopRequireDefault(_Register);
-
-var _reactRouterDom = require('react-router-dom');
-
-var _folderOpenO = require('react-icons/lib/fa/folder-open-o');
-
-var _folderOpenO2 = _interopRequireDefault(_folderOpenO);
-
-var _github = require('react-icons/lib/fa/github');
-
-var _github2 = _interopRequireDefault(_github);
-
-var _random = require('react-icons/lib/fa/random');
-
-var _random2 = _interopRequireDefault(_random);
-
-var _list = require('react-icons/lib/fa/list');
-
-var _list2 = _interopRequireDefault(_list);
-
-var _codeFork = require('react-icons/lib/fa/code-fork');
-
-var _codeFork2 = _interopRequireDefault(_codeFork);
-
-var _handOUp = require('react-icons/lib/fa/hand-o-up');
-
-var _handOUp2 = _interopRequireDefault(_handOUp);
-
-var _code = require('react-icons/lib/fa/code');
-
-var _code2 = _interopRequireDefault(_code);
-
-var _cogs = require('react-icons/lib/fa/cogs');
-
-var _cogs2 = _interopRequireDefault(_cogs);
-
-var _angleDown = require('react-icons/lib/fa/angle-down');
-
-var _angleDown2 = _interopRequireDefault(_angleDown);
-
-var _angleLeft = require('react-icons/lib/fa/angle-left');
-
-var _angleLeft2 = _interopRequireDefault(_angleLeft);
-
-var _index = require('./Layout/index');
-
-var _index2 = require('./Registry/index');
-
-var _index3 = require('./Data/index');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -88,33 +24,45 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _ref = _jsx('div', {}, void 0, _jsx('p', {}, void 0, 'Components'));
+var ProfileIconComponent = function (_Component) {
+  _inherits(ProfileIconComponent, _Component);
 
-var MainComponent = function (_Component) {
-  _inherits(MainComponent, _Component);
+  function ProfileIconComponent() {
+    _classCallCheck(this, ProfileIconComponent);
 
-  function MainComponent() {
-    _classCallCheck(this, MainComponent);
-
-    return _possibleConstructorReturn(this, (MainComponent.__proto__ || Object.getPrototypeOf(MainComponent)).call(this));
+    return _possibleConstructorReturn(this, (ProfileIconComponent.__proto__ || Object.getPrototypeOf(ProfileIconComponent)).call(this));
   }
 
-  _createClass(MainComponent, [{
+  _createClass(ProfileIconComponent, [{
     key: 'render',
     value: function render() {
-      return _ref;
+
+      return _jsx('div', {}, void 0, _jsx(_reactBootstrap.Image, {
+        src: 'https://avatars2.githubusercontent.com/u/2837196?v=4',
+        circle: true,
+        responsive: true,
+        style: {
+          margin: '5px',
+          marginTop: '25px',
+          height: '42px',
+          float: 'right'
+        },
+        onClick: function onClick() {
+          alert('Hello');
+        }
+      }));
     }
   }]);
 
-  return MainComponent;
+  return ProfileIconComponent;
 }(_react.Component);
 
 var mapStoreToProps = function mapStoreToProps(store, props) {
   return {
-    Layout: store.Layout
+    Actions: store.Actions
   };
 };
 
-var Main = (0, _reactRedux.connect)(mapStoreToProps)(MainComponent);
+var ProfileIcon = (0, _reactRedux.connect)(mapStoreToProps)(ProfileIconComponent);
 
-exports.default = Main;
+exports.default = ProfileIcon;

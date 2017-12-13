@@ -3,27 +3,22 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.RightSideNav = exports.LeftSideNav = exports.Header = exports.Footer = undefined;
+exports.Header = exports.ProfileIcon = exports.Menu = undefined;
 
-var _Footer = require('./Footer.jsx');
-
-var _Footer2 = _interopRequireDefault(_Footer);
-
-var _Header = require('./Header.jsx');
+var _Header = require('./Header');
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _LeftSideNav = require('./LeftSideNav.jsx');
+var _ProfileIcon = require('./ProfileIcon');
 
-var _LeftSideNav2 = _interopRequireDefault(_LeftSideNav);
+var _ProfileIcon2 = _interopRequireDefault(_ProfileIcon);
 
-var _RightSideNav = require('./RightSideNav.jsx');
+var _Menu = require('./Menu');
 
-var _RightSideNav2 = _interopRequireDefault(_RightSideNav);
+var _Menu2 = _interopRequireDefault(_Menu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.Footer = _Footer2.default;
+exports.Menu = _Menu2.default;
+exports.ProfileIcon = _ProfileIcon2.default;
 exports.Header = _Header2.default;
-exports.LeftSideNav = _LeftSideNav2.default;
-exports.RightSideNav = _RightSideNav2.default;

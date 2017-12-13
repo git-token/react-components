@@ -1,7 +1,5 @@
-import * as Layout from './Layout'
-import Main from './Main.jsx'
+import * as Layout from './Layout/index'
 
 export {
-  Main,
   Layout
 }
