@@ -16,13 +16,9 @@ var _reactRedux = require('react-redux');
 
 var _reactBootstrap = require('react-bootstrap');
 
-var _NavBarLogo = require('gittoken-svg-icons/dist/NavBarLogo');
+var _Header = require('../Layout/Header');
 
-var _NavBarLogo2 = _interopRequireDefault(_NavBarLogo);
-
-var _ProfileIcon = require('../Account/ProfileIcon');
-
-var _ProfileIcon2 = _interopRequireDefault(_ProfileIcon);
+var _Header2 = _interopRequireDefault(_Header);
 
 var _Menu = require('./Menu');
 
@@ -36,53 +32,43 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _ref = _jsx(_NavBarLogo2.default, {
-  width: '20%'
-});
+var _ref = _jsx('div', {}, void 0, _jsx(_reactBootstrap.Grid, {}, void 0, _jsx('p', {}, void 0, 'Hello')));
 
-var HeaderComponent = function (_Component) {
-  _inherits(HeaderComponent, _Component);
+var RegisterComponent = function (_Component) {
+  _inherits(RegisterComponent, _Component);
 
-  function HeaderComponent() {
-    _classCallCheck(this, HeaderComponent);
+  function RegisterComponent() {
+    _classCallCheck(this, RegisterComponent);
 
-    return _possibleConstructorReturn(this, (HeaderComponent.__proto__ || Object.getPrototypeOf(HeaderComponent)).call(this));
+    return _possibleConstructorReturn(this, (RegisterComponent.__proto__ || Object.getPrototypeOf(RegisterComponent)).call(this));
   }
 
-  _createClass(HeaderComponent, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {}
-  }, {
+  _createClass(RegisterComponent, [{
     key: 'render',
     value: function render() {
-      var username = this.props.Account.profile.username;
 
-
-      return _jsx('div', {}, void 0, _jsx(_reactBootstrap.Row, {}, void 0, _jsx(_reactBootstrap.Col, {
-        lg: 12
-      }, void 0, _jsx('div', {
-        style: { marginTop: '20px' }
-      }, void 0, _jsx(_ProfileIcon2.default, {
-        url: "https://avatars2.githubusercontent.com/u/2837196?v=4",
-        onClick: function onClick() {
-          location.href = "/account";
-        },
-        width: '30%',
-        height: '30%'
-      }), _ref))));
+      return _ref;
     }
   }]);
 
-  return HeaderComponent;
+  return RegisterComponent;
 }(_react.Component);
 
 var mapStoreToProps = function mapStoreToProps(store, props) {
   return {
     Actions: store.Actions,
-    Account: store.Account
+    menu: [{
+      key: 'register',
+      title: 'Register Organization',
+      link: '/account/register'
+    }, {
+      key: 'contributions',
+      title: 'Contribution Activity',
+      link: '/account/contributions'
+    }]
   };
 };
 
-var Header = (0, _reactRedux.connect)(mapStoreToProps)(HeaderComponent);
+var Register = (0, _reactRedux.connect)(mapStoreToProps)(RegisterComponent);
 
-exports.default = Header;
+exports.default = Register;

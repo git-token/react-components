@@ -27,7 +27,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var _ref = _jsx(_reactBootstrap.Button, {
   bsStyle: 'link'
 }, void 0, _jsx('a', {
-  href: 'https://github.com/git-token',
+  href: 'https://github.com/git-token/documentation/blob/master/README.md',
   target: '_blank'
 }, void 0, 'What is GitToken?'));
 

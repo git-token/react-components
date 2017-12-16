@@ -16,18 +16,6 @@ var _reactRedux = require('react-redux');
 
 var _reactBootstrap = require('react-bootstrap');
 
-var _NavBarLogo = require('gittoken-svg-icons/dist/NavBarLogo');
-
-var _NavBarLogo2 = _interopRequireDefault(_NavBarLogo);
-
-var _ProfileIcon = require('../Account/ProfileIcon');
-
-var _ProfileIcon2 = _interopRequireDefault(_ProfileIcon);
-
-var _Menu = require('./Menu');
-
-var _Menu2 = _interopRequireDefault(_Menu);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36,44 +24,58 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _ref = _jsx(_NavBarLogo2.default, {
-  width: '20%'
-});
+var MenuComponent = function (_Component) {
+  _inherits(MenuComponent, _Component);
 
-var HeaderComponent = function (_Component) {
-  _inherits(HeaderComponent, _Component);
+  function MenuComponent() {
+    _classCallCheck(this, MenuComponent);
 
-  function HeaderComponent() {
-    _classCallCheck(this, HeaderComponent);
-
-    return _possibleConstructorReturn(this, (HeaderComponent.__proto__ || Object.getPrototypeOf(HeaderComponent)).call(this));
+    return _possibleConstructorReturn(this, (MenuComponent.__proto__ || Object.getPrototypeOf(MenuComponent)).call(this));
   }
 
-  _createClass(HeaderComponent, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {}
+  _createClass(MenuComponent, [{
+    key: 'select',
+    value: function select(item) {
+      var _props = this.props,
+          dispatch = _props.dispatch,
+          menu = _props.Account.menu;
+
+      location.href = '/' + item;
+    }
+  }, {
+    key: 'menuItems',
+    value: function menuItems(_ref) {
+      var menu = _ref.menu;
+
+      return menu.map(function (item, i) {
+        var key = item.key,
+            title = item.title,
+            link = item.link;
+
+        return _jsx(_reactBootstrap.NavItem, {
+          eventKey: key,
+          href: link
+        }, key, title);
+      });
+    }
   }, {
     key: 'render',
     value: function render() {
-      var username = this.props.Account.profile.username;
+      var menu = this.props.Account.menu;
 
 
       return _jsx('div', {}, void 0, _jsx(_reactBootstrap.Row, {}, void 0, _jsx(_reactBootstrap.Col, {
         lg: 12
-      }, void 0, _jsx('div', {
-        style: { marginTop: '20px' }
-      }, void 0, _jsx(_ProfileIcon2.default, {
-        url: "https://avatars2.githubusercontent.com/u/2837196?v=4",
-        onClick: function onClick() {
-          location.href = "/account";
-        },
-        width: '30%',
-        height: '30%'
-      }), _ref))));
+      }, void 0, _jsx(_reactBootstrap.Nav, {
+        style: { marginTop: '-75px' },
+        bsStyle: 'pills',
+        activeKey: location.pathname.replace("/", ""),
+        onSelect: this.select.bind(this)
+      }, void 0, this.menuItems({ menu: menu })))));
     }
   }]);
 
-  return HeaderComponent;
+  return MenuComponent;
 }(_react.Component);
 
 var mapStoreToProps = function mapStoreToProps(store, props) {
@@ -83,6 +85,6 @@ var mapStoreToProps = function mapStoreToProps(store, props) {
   };
 };
 
-var Header = (0, _reactRedux.connect)(mapStoreToProps)(HeaderComponent);
+var Menu = (0, _reactRedux.connect)(mapStoreToProps)(MenuComponent);
 
-exports.default = Header;
+exports.default = Menu;

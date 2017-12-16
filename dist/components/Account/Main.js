@@ -16,17 +16,17 @@ var _reactRedux = require('react-redux');
 
 var _reactBootstrap = require('react-bootstrap');
 
-var _NavBarLogo = require('gittoken-svg-icons/dist/NavBarLogo');
+var _Header = require('../Layout/Header');
 
-var _NavBarLogo2 = _interopRequireDefault(_NavBarLogo);
-
-var _ProfileIcon = require('../Account/ProfileIcon');
-
-var _ProfileIcon2 = _interopRequireDefault(_ProfileIcon);
+var _Header2 = _interopRequireDefault(_Header);
 
 var _Menu = require('./Menu');
 
 var _Menu2 = _interopRequireDefault(_Menu);
+
+var _Register = require('./Register');
+
+var _Register2 = _interopRequireDefault(_Register);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36,53 +36,34 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _ref = _jsx(_NavBarLogo2.default, {
-  width: '20%'
-});
+var _ref = _jsx('div', {}, void 0, _jsx(_reactBootstrap.Grid, {}, void 0, _jsx(_Header2.default, {}), _jsx(_Menu2.default, {})));
 
-var HeaderComponent = function (_Component) {
-  _inherits(HeaderComponent, _Component);
+var MainComponent = function (_Component) {
+  _inherits(MainComponent, _Component);
 
-  function HeaderComponent() {
-    _classCallCheck(this, HeaderComponent);
+  function MainComponent() {
+    _classCallCheck(this, MainComponent);
 
-    return _possibleConstructorReturn(this, (HeaderComponent.__proto__ || Object.getPrototypeOf(HeaderComponent)).call(this));
+    return _possibleConstructorReturn(this, (MainComponent.__proto__ || Object.getPrototypeOf(MainComponent)).call(this));
   }
 
-  _createClass(HeaderComponent, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {}
-  }, {
+  _createClass(MainComponent, [{
     key: 'render',
     value: function render() {
-      var username = this.props.Account.profile.username;
 
-
-      return _jsx('div', {}, void 0, _jsx(_reactBootstrap.Row, {}, void 0, _jsx(_reactBootstrap.Col, {
-        lg: 12
-      }, void 0, _jsx('div', {
-        style: { marginTop: '20px' }
-      }, void 0, _jsx(_ProfileIcon2.default, {
-        url: "https://avatars2.githubusercontent.com/u/2837196?v=4",
-        onClick: function onClick() {
-          location.href = "/account";
-        },
-        width: '30%',
-        height: '30%'
-      }), _ref))));
+      return _ref;
     }
   }]);
 
-  return HeaderComponent;
+  return MainComponent;
 }(_react.Component);
 
 var mapStoreToProps = function mapStoreToProps(store, props) {
   return {
-    Actions: store.Actions,
-    Account: store.Account
+    Actions: store.Actions
   };
 };
 
-var Header = (0, _reactRedux.connect)(mapStoreToProps)(HeaderComponent);
+var Main = (0, _reactRedux.connect)(mapStoreToProps)(MainComponent);
 
-exports.default = Header;
+exports.default = Main;

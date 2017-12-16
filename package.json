@@ -1,6 +1,6 @@
 {
   "name": "gittoken-react-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "GitToken React Components",
   "main": "./dist/index.js",
   "scripts": {
