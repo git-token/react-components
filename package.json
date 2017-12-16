@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "test": "mocha",
-    "start:dev": "npx webpack-dev-server --hot --inline",
+    "start:dev": "npx webpack-dev-server --hot --inline --host 0.0.0.0",
     "build:ui": "npx webpack --config webpack.config.js",
     "build:src": "npx babel ./src/ --out-dir ./dist/ --plugins transform-react-jsx"
   },
@@ -27,7 +27,7 @@
     "ethereumjs-tx": "^1.3.3",
     "github-api": "^3.0.0",
     "gittoken-contracts": "0.0.46",
-    "gittoken-reducers": "0.0.18",
+    "gittoken-reducers": "0.0.21",
     "gittoken-registry-ui": "0.0.13",
     "gittoken-svg-icons": "0.0.9",
     "gittoken-web-workers": "0.0.60",

@@ -9,7 +9,7 @@ import {
 
 import NavBarLogo from 'gittoken-svg-icons/dist/NavBarLogo'
 
-import ProfileIcon from './ProfileIcon'
+import ProfileIcon from '../Account/ProfileIcon'
 import Menu from './Menu'
 
 class HeaderComponent extends Component {
@@ -25,22 +25,22 @@ class HeaderComponent extends Component {
   render() {
     const { Account: { profile: { username } } } = this.props
 
-    console.log('username', username)
-
     return (
       <div>
-        <Grid>
-          <Row>
-            <Col lg={6}>
-              <div style={{ marginTop: '10px' }}>
-                <NavBarLogo width={'40%'} />
-              </div>
-            </Col>
-            <Col lg={6}>
-              {username ? <ProfileIcon /> : <Menu />}
-            </Col>
-          </Row>
-        </Grid>
+        <Row>
+          <Col lg={12}>
+            <div style={{ marginTop: '20px' }}>
+              <ProfileIcon
+                url={"https://avatars2.githubusercontent.com/u/2837196?v=4"}
+                onClick={() => { location.href = "/account" }}
+                width={'30%'}
+                height={'30%'}
+              />
+              <NavBarLogo width={'20%'} />
+            </div>
+            {/* {username ? <ProfileIcon /> : <Menu />} */}
+          </Col>
+        </Row>
       </div>
     )
   }

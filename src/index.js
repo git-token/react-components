@@ -4,13 +4,11 @@ import { Provider } from 'react-redux'
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
 
 import {
-  Layout
+  Layout,
+  Account
 } from './components/index';
 
-const {
-  Header
-} = Layout
-
+const { Main } = Account
 import { store, history } from './store'
 
 
@@ -18,9 +16,11 @@ ReactDOM.render(
   <BrowserRouter>
     <Provider store={store}>
         <div >
+          <Main />
+
           <Switch>
-            {/* <Route exact path="/" component={Main}/> */}
-            <Route exact path="/" component={Header}/>
+            <Route exact path="/contributions" component={Account['Register']}/>
+            <Route exact path="/register" component={Account['Register']}/>
           </Switch>
         </div>
     </Provider>
