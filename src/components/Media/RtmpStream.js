@@ -23,7 +23,7 @@ class RtmpStreamComponent extends Component {
 
 const mapStoreToProps = ({ store, props }) => {
   return {
-    Media: store.store
+    Media: store.Media
   }
 }
 

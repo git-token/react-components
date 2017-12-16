@@ -61032,7 +61032,7 @@ var mapStoreToProps = function mapStoreToProps(_ref) {
       props = _ref.props;
 
   return {
-    Media: store.store
+    Media: store.Media
   };
 };
 
