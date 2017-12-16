@@ -1,6 +1,6 @@
 {
   "name": "gittoken-react-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "GitToken React Components",
   "main": "./dist/index.js",
   "scripts": {
@@ -36,6 +36,7 @@
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.0.0",
     "react-draggable": "^3.0.3",
+    "react-hls": "0.0.7",
     "react-icons": "^2.2.7",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",

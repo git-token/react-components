@@ -21,7 +21,7 @@ class MenuComponent extends Component {
         float: 'right'
       }}>
         <ButtonGroup>
-          <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">What is GitToken?</a></Button>
+          <Button bsStyle={'link'}><a href="https://github.com/git-token/documentation/blob/master/README.md" target="_blank">What is GitToken?</a></Button>
           <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">GitHub</a></Button>
           {/* <Button bsStyle={'link'}><a href="https://github.com/git-token" target="_blank">Road Map</a></Button> */}
           {/* <Button bsStyle={'link'}><a href="https://medium.com/gittoken" target="_blank">Publications</a></Button> */}
