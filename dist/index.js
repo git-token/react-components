@@ -18,19 +18,12 @@ var _index = require('./components/index');
 
 var _store = require('./store');
 
+var _HlsStream = require('./components/Media/HlsStream');
+
+var _HlsStream2 = _interopRequireDefault(_HlsStream);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Main = _index.Account.Main;
-
 
 _reactDom2.default.render(_jsx(_reactRouterDom.BrowserRouter, {}, void 0, _jsx(_reactRedux.Provider, {
   store: _store.store
-}, void 0, _jsx('div', {}, void 0, _jsx(Main, {}), _jsx(_reactRouterDom.Switch, {}, void 0, _jsx(_reactRouterDom.Route, {
-  exact: true,
-  path: '/contributions',
-  component: _index.Account['Register']
-}), _jsx(_reactRouterDom.Route, {
-  exact: true,
-  path: '/register',
-  component: _index.Account['Register']
-}))))), document.getElementById('app'));
+}, void 0, _jsx('div', {}, void 0, _jsx(_HlsStream2.default, {})))), document.getElementById('app'));

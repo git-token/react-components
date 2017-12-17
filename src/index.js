@@ -8,20 +8,18 @@ import {
   Account
 } from './components/index';
 
-const { Main } = Account
+
+
 import { store, history } from './store'
+
+import HlsStream from './components/Media/HlsStream'
 
 
 ReactDOM.render(
   <BrowserRouter>
     <Provider store={store}>
         <div >
-          <Main />
-
-          <Switch>
-            <Route exact path="/contributions" component={Account['Register']}/>
-            <Route exact path="/register" component={Account['Register']}/>
-          </Switch>
+          <HlsStream />
         </div>
     </Provider>
   </BrowserRouter>,

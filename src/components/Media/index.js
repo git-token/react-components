@@ -1,5 +1,5 @@
-import RtmpStream from './RtmpStream'
+import HlsStream from './HlsStream'
 
 export {
-  RtmpStream
+  HlsStream
 }

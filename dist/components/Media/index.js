@@ -3,12 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.RtmpStream = undefined;
+exports.HlsStream = undefined;
 
-var _RtmpStream = require('./RtmpStream');
+var _HlsStream = require('./HlsStream');
 
-var _RtmpStream2 = _interopRequireDefault(_RtmpStream);
+var _HlsStream2 = _interopRequireDefault(_HlsStream);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.RtmpStream = _RtmpStream2.default;
+exports.HlsStream = _HlsStream2.default;
