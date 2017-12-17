@@ -18,6 +18,8 @@ var _hls = require('hls.js');
 
 var _hls2 = _interopRequireDefault(_hls);
 
+var _reactBootstrap = require('react-bootstrap');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26,7 +28,11 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _ref = _jsx('h1', {}, void 0, 'GitToken Developer Live Stream');
+var _ref = _jsx('br', {});
+
+var _ref2 = _jsx('br', {});
+
+var _ref3 = _jsx('br', {});
 
 var HlsStreamComponent = function (_Component) {
   _inherits(HlsStreamComponent, _Component);
@@ -69,7 +75,6 @@ var HlsStreamComponent = function (_Component) {
                 hls.recoverMediaError();
                 break;
               default:
-                // cannot recover
                 hls.destroy();
                 break;
             }
@@ -92,10 +97,20 @@ var HlsStreamComponent = function (_Component) {
 
       if (streamLive) {
         return _jsx('div', {
-          'data-vjs-player': true
-        }, void 0, _jsx('center', {}, void 0, _ref, _react2.default.createElement('video', { ref: function ref(node) {
+          style: {
+            backgroundColor: 'rgba(0,0,0,0.3)',
+            paddingBottom: '150px'
+          }
+        }, void 0, _jsx(_reactBootstrap.Grid, {}, void 0, _jsx(_reactBootstrap.Row, {}, void 0, _jsx(_reactBootstrap.Col, {
+          xs: 12,
+          sm: 12,
+          md: 12,
+          lg: 12
+        }, void 0, _ref, _jsx('center', {}, void 0, _jsx('p', {
+          style: { fontSize: '96px' }
+        }, void 0, 'GitToken Live Stream'), _ref2, _react2.default.createElement('video', { width: "100%", ref: function ref(node) {
             _this2.videoNode = node;
-          }, autoPlay: true, controls: true, data: '{}' })));
+          }, autoPlay: true, controls: true, data: '{}' })), _ref3))));
       } else {
         return null;
       }

@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Hls from 'hls.js'
 
+import {
+  Grid,
+  Col,
+  Row,
+  Panel
+} from 'react-bootstrap'
+
 class HlsStreamComponent extends Component {
   constructor() {
     super()
@@ -31,7 +38,6 @@ class HlsStreamComponent extends Component {
             hls.recoverMediaError();
             break;
           default:
-          // cannot recover
             hls.destroy();
             break;
           }
@@ -39,9 +45,7 @@ class HlsStreamComponent extends Component {
       });
 
       hls.attachMedia(this.videoNode);
-      hls.on(Hls.Events.MANIFEST_PARSED, function(parsed) {
-
-      });
+      hls.on(Hls.Events.MANIFEST_PARSED, function(parsed) { });
 
     }
 
@@ -53,11 +57,57 @@ class HlsStreamComponent extends Component {
 
     if (streamLive) {
       return (
-        <div data-vjs-player>
-          <center>
-            <h1>GitToken Developer Live Stream</h1>
-            <video ref={(node) => { this.videoNode = node }} autoPlay controls data='{}'></video>
-          </center>
+        <div style={{
+          // backgroundColor: 'rgba(0,0,0,0.3)',
+          paddingBottom: '150px'
+        }}>
+          <Grid>
+            <Row>
+              <Col xs={12} sm={12} md={12} lg={12}>
+                <br/>
+                <center style={{
+                  // position: 'relative'
+                }}>
+                  <br/>
+                  {/* <div >
+                    <p style={{
+                      fontSize: '96px',
+                      zIndex: '1'
+                    }}>GitToken Live Stream</p>
+                  </div> */}
+                  <br/>
+                  <video
+                    width={"100%"}
+                    ref={(node) => { this.videoNode = node }}
+                    autoPlay controls data='{}'
+                    style={{
+                      zIndex: '1',
+                      position: 'absolute'
+                    }}
+                    >
+                  </video>
+                  <svg
+                    width={"100%"}
+                    viewBox="0 0 1000 1000"
+                    style={{
+                      zIndex: '-1',
+                      marginTop: '-200px'
+                    }}>
+
+                    <defs>
+                      <radialGradient id="g1" fx="50%" fy="50%" cx="50%" cy="50%" r="50%">
+                          <stop stopColor="white" offset="10%"/>
+                          <stop stopColor="#320551" offset="100%"/>
+                      </radialGradient>
+                    </defs>
+
+                    <circle cx="500" cy="500" r="400" style={{fill: 'url(#g1)'}}/>
+                </svg>
+                </center>
+                <br/>
+              </Col>
+            </Row>
+          </Grid>
         </div>
       )
     } else {
