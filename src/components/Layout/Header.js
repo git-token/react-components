@@ -23,22 +23,21 @@ class HeaderComponent extends Component {
   }
 
   render() {
-    const { Account: { profile: { username } } } = this.props
+    const { Account: { profile: { username, _json: { avatar_url } } } } = this.props
 
     return (
       <div>
         <Row>
           <Col lg={12}>
             <div style={{ marginTop: '20px' }}>
-              <ProfileIcon
-                url={"https://avatars2.githubusercontent.com/u/2837196?v=4"}
+              { username ? <ProfileIcon
+                url={avatar_url}
                 onClick={() => { location.href = "/account" }}
                 width={'30%'}
                 height={'30%'}
-              />
+              /> : <Menu /> }
               <NavBarLogo width={'20%'} />
             </div>
-            {/* {username ? <ProfileIcon /> : <Menu />} */}
           </Col>
         </Row>
       </div>

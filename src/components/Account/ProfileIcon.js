@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {
+  Image
+} from 'react-bootstrap'
 
 class ProfileIconComponent extends Component {
   constructor() {
@@ -8,7 +11,6 @@ class ProfileIconComponent extends Component {
 
 
   render() {
-    // const { Account: { profile: { _json: { avatar_url } } } } = this.props
     let { width, height, style, opacity, url, onClick } = this.props
 
 
@@ -16,6 +18,12 @@ class ProfileIconComponent extends Component {
 		width = width ? width : '50%'
 		height = height ? height : '50%'
 		style = style ? style : null
+
+    // return (
+    //   <div>
+    //     <Image circle />
+    //   </div>
+    // )
 
     return (
       <div style={{ float: 'right' }} onClick={onClick}>
