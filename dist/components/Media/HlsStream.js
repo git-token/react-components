@@ -42,8 +42,8 @@ var _ref4 = _jsx('defs', {}, void 0, _jsx('radialGradient', {
   cy: '50%',
   r: '50%'
 }, void 0, _jsx('stop', {
-  stopColor: 'white',
-  offset: '10%'
+  stopColor: '#cc5333',
+  offset: '1%'
 }), _jsx('stop', {
   stopColor: '#320551',
   offset: '100%'

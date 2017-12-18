@@ -7,7 +7,6 @@ import {
   Grid
 } from 'react-bootstrap'
 
-
 import {
   Layout,
   Account,
@@ -20,14 +19,12 @@ const { HlsStream } = Media
 import { store, history } from './store'
 
 
-
-
 ReactDOM.render(
   <BrowserRouter>
     <Provider store={store}>
         <Grid >
           <Header />
-          {/* <HlsStream /> */}
+          <HlsStream />
         </Grid>
     </Provider>
   </BrowserRouter>,

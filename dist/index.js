@@ -28,4 +28,4 @@ var HlsStream = _index.Media.HlsStream;
 
 _reactDom2.default.render(_jsx(_reactRouterDom.BrowserRouter, {}, void 0, _jsx(_reactRedux.Provider, {
   store: _store.store
-}, void 0, _jsx(_reactBootstrap.Grid, {}, void 0, _jsx(Header, {})))), document.getElementById('app'));
+}, void 0, _jsx(_reactBootstrap.Grid, {}, void 0, _jsx(Header, {}), _jsx(HlsStream, {})))), document.getElementById('app'));

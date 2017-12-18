@@ -96,7 +96,7 @@ class HlsStreamComponent extends Component {
 
                     <defs>
                       <radialGradient id="g1" fx="50%" fy="50%" cx="50%" cy="50%" r="50%">
-                          <stop stopColor="white" offset="10%"/>
+                          <stop stopColor="#cc5333" offset="1%"/>
                           <stop stopColor="#320551" offset="100%"/>
                       </radialGradient>
                     </defs>
