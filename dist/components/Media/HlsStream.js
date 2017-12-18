@@ -34,6 +34,23 @@ var _ref2 = _jsx('br', {});
 
 var _ref3 = _jsx('br', {});
 
+var _ref4 = _jsx('defs', {}, void 0, _jsx('radialGradient', {
+  id: 'g1',
+  fx: '50%',
+  fy: '50%',
+  cx: '50%',
+  cy: '50%',
+  r: '50%'
+}, void 0, _jsx('stop', {
+  stopColor: 'white',
+  offset: '10%'
+}), _jsx('stop', {
+  stopColor: '#320551',
+  offset: '100%'
+})));
+
+var _ref5 = _jsx('br', {});
+
 var HlsStreamComponent = function (_Component) {
   _inherits(HlsStreamComponent, _Component);
 
@@ -98,7 +115,7 @@ var HlsStreamComponent = function (_Component) {
       if (streamLive) {
         return _jsx('div', {
           style: {
-            backgroundColor: 'rgba(0,0,0,0.3)',
+            // backgroundColor: 'rgba(0,0,0,0.3)',
             paddingBottom: '150px'
           }
         }, void 0, _jsx(_reactBootstrap.Grid, {}, void 0, _jsx(_reactBootstrap.Row, {}, void 0, _jsx(_reactBootstrap.Col, {
@@ -106,11 +123,33 @@ var HlsStreamComponent = function (_Component) {
           sm: 12,
           md: 12,
           lg: 12
-        }, void 0, _ref, _jsx('center', {}, void 0, _jsx('p', {
-          style: { fontSize: '96px' }
-        }, void 0, 'GitToken Live Stream'), _ref2, _react2.default.createElement('video', { width: "100%", ref: function ref(node) {
+        }, void 0, _ref, _jsx('center', {
+          style: {
+            // position: 'relative'
+          }
+        }, void 0, _ref2, _ref3, _react2.default.createElement('video', {
+          width: "100%",
+          ref: function ref(node) {
             _this2.videoNode = node;
-          }, autoPlay: true, controls: true, data: '{}' })), _ref3))));
+          },
+          autoPlay: true, controls: true, data: '{}',
+          style: {
+            zIndex: '1',
+            position: 'absolute'
+          }
+        }), _jsx('svg', {
+          width: "100%",
+          viewBox: '0 0 1000 1000',
+          style: {
+            zIndex: '-1',
+            marginTop: '-200px'
+          }
+        }, void 0, _ref4, _jsx('circle', {
+          cx: '500',
+          cy: '500',
+          r: '400',
+          style: { fill: 'url(#g1)' }
+        }))), _ref5))));
       } else {
         return null;
       }

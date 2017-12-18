@@ -36,7 +36,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _ref = _jsx(_NavBarLogo2.default, {
+var _ref = _jsx(_Menu2.default, {});
+
+var _ref2 = _jsx(_NavBarLogo2.default, {
   width: '20%'
 });
 
@@ -55,21 +57,23 @@ var HeaderComponent = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var username = this.props.Account.profile.username;
+      var _props$Account$profil = this.props.Account.profile,
+          username = _props$Account$profil.username,
+          avatar_url = _props$Account$profil._json.avatar_url;
 
 
       return _jsx('div', {}, void 0, _jsx(_reactBootstrap.Row, {}, void 0, _jsx(_reactBootstrap.Col, {
         lg: 12
       }, void 0, _jsx('div', {
         style: { marginTop: '20px' }
-      }, void 0, _jsx(_ProfileIcon2.default, {
-        url: "https://avatars2.githubusercontent.com/u/2837196?v=4",
+      }, void 0, username ? _jsx(_ProfileIcon2.default, {
+        url: avatar_url,
         onClick: function onClick() {
           location.href = "/account";
         },
         width: '30%',
         height: '30%'
-      }), _ref))));
+      }) : _ref, _ref2))));
     }
   }]);
 

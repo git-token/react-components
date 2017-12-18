@@ -14,6 +14,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = require('react-redux');
 
+var _reactBootstrap = require('react-bootstrap');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -56,7 +58,6 @@ var ProfileIconComponent = function (_Component) {
   _createClass(ProfileIconComponent, [{
     key: 'render',
     value: function render() {
-      // const { Account: { profile: { _json: { avatar_url } } } } = this.props
       var _props = this.props,
           width = _props.width,
           height = _props.height,
@@ -70,6 +71,12 @@ var ProfileIconComponent = function (_Component) {
       width = width ? width : '50%';
       height = height ? height : '50%';
       style = style ? style : null;
+
+      // return (
+      //   <div>
+      //     <Image circle />
+      //   </div>
+      // )
 
       return _jsx('div', {
         style: { float: 'right' },
