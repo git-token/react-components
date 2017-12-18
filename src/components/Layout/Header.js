@@ -23,7 +23,9 @@ class HeaderComponent extends Component {
   }
 
   render() {
-    const { Account: { profile: { username, _json: { avatar_url } } } } = this.props
+    const { Account: { profile: { username, _json } } } = this.props
+
+    const url = _json ? _json['avatar_url'] : null
 
     return (
       <div>

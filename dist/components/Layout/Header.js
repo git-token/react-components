@@ -59,8 +59,10 @@ var HeaderComponent = function (_Component) {
     value: function render() {
       var _props$Account$profil = this.props.Account.profile,
           username = _props$Account$profil.username,
-          avatar_url = _props$Account$profil._json.avatar_url;
+          _json = _props$Account$profil._json;
 
+
+      var url = _json ? _json['avatar_url'] : null;
 
       return _jsx('div', {}, void 0, _jsx(_reactBootstrap.Row, {}, void 0, _jsx(_reactBootstrap.Col, {
         lg: 12
