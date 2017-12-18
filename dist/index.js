@@ -14,16 +14,18 @@ var _reactRedux = require('react-redux');
 
 var _reactRouterDom = require('react-router-dom');
 
+var _reactBootstrap = require('react-bootstrap');
+
 var _index = require('./components/index');
 
 var _store = require('./store');
 
-var _HlsStream = require('./components/Media/HlsStream');
-
-var _HlsStream2 = _interopRequireDefault(_HlsStream);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = _index.Layout.Header;
+var HlsStream = _index.Media.HlsStream;
+
 
 _reactDom2.default.render(_jsx(_reactRouterDom.BrowserRouter, {}, void 0, _jsx(_reactRedux.Provider, {
   store: _store.store
-}, void 0, _jsx('div', {}, void 0, _jsx(_HlsStream2.default, {})))), document.getElementById('app'));
+}, void 0, _jsx(_reactBootstrap.Grid, {}, void 0, _jsx(Header, {})))), document.getElementById('app'));

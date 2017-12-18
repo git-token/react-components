@@ -69,7 +69,7 @@ var HeaderComponent = function (_Component) {
       }, void 0, _jsx('div', {
         style: { marginTop: '20px' }
       }, void 0, username ? _jsx(_ProfileIcon2.default, {
-        url: avatar_url,
+        url: url,
         onClick: function onClick() {
           location.href = "/account";
         },

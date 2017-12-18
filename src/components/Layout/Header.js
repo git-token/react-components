@@ -33,7 +33,7 @@ class HeaderComponent extends Component {
           <Col lg={12}>
             <div style={{ marginTop: '20px' }}>
               { username ? <ProfileIcon
-                url={avatar_url}
+                url={url}
                 onClick={() => { location.href = "/account" }}
                 width={'30%'}
                 height={'30%'}
