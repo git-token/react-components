@@ -64,17 +64,15 @@ class HlsStreamComponent extends Component {
           <Grid>
             <Row>
               <Col xs={12} sm={12} md={12} lg={12}>
-                <br/>
-                <center style={{
-                  // position: 'relative'
-                }}>
+                <center>
                   <br/>
-                  {/* <div >
+                  <div >
                     <p style={{
                       fontSize: '96px',
-                      zIndex: '1'
+                      zIndex: '1',
+                      paddingBottom: '50px'
                     }}>GitToken Live Stream</p>
-                  </div> */}
+                  </div>
                   <br/>
                   <video
                     width={"100%"}

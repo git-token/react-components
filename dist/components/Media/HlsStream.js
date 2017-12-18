@@ -32,9 +32,7 @@ var _ref = _jsx('br', {});
 
 var _ref2 = _jsx('br', {});
 
-var _ref3 = _jsx('br', {});
-
-var _ref4 = _jsx('defs', {}, void 0, _jsx('radialGradient', {
+var _ref3 = _jsx('defs', {}, void 0, _jsx('radialGradient', {
   id: 'g1',
   fx: '50%',
   fy: '50%',
@@ -49,7 +47,7 @@ var _ref4 = _jsx('defs', {}, void 0, _jsx('radialGradient', {
   offset: '100%'
 })));
 
-var _ref5 = _jsx('br', {});
+var _ref4 = _jsx('br', {});
 
 var HlsStreamComponent = function (_Component) {
   _inherits(HlsStreamComponent, _Component);
@@ -123,11 +121,13 @@ var HlsStreamComponent = function (_Component) {
           sm: 12,
           md: 12,
           lg: 12
-        }, void 0, _ref, _jsx('center', {
+        }, void 0, _jsx('center', {}, void 0, _ref, _jsx('div', {}, void 0, _jsx('p', {
           style: {
-            // position: 'relative'
+            fontSize: '96px',
+            zIndex: '1',
+            paddingBottom: '50px'
           }
-        }, void 0, _ref2, _ref3, _react2.default.createElement('video', {
+        }, void 0, 'GitToken Live Stream')), _ref2, _react2.default.createElement('video', {
           width: "100%",
           ref: function ref(node) {
             _this2.videoNode = node;
@@ -144,12 +144,12 @@ var HlsStreamComponent = function (_Component) {
             zIndex: '-1',
             marginTop: '-200px'
           }
-        }, void 0, _ref4, _jsx('circle', {
+        }, void 0, _ref3, _jsx('circle', {
           cx: '500',
           cy: '500',
           r: '400',
           style: { fill: 'url(#g1)' }
-        }))), _ref5))));
+        }))), _ref4))));
       } else {
         return null;
       }
