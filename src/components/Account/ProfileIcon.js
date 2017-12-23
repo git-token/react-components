@@ -11,13 +11,14 @@ class ProfileIconComponent extends Component {
 
 
   render() {
-    let { width, height, style, opacity, url, onClick } = this.props
+    let { width, height, style, opacity, url, onClick, viewBox } = this.props
 
 
 		opacity = opacity ? opacity : '0'
 		width = width ? width : '50%'
 		height = height ? height : '50%'
 		style = style ? style : null
+    viewBox = viewBox ? viewBox : '0 0 1000 1000'
 
     // return (
     //   <div>
@@ -27,7 +28,7 @@ class ProfileIconComponent extends Component {
 
     return (
       <div style={{ float: 'right' }} onClick={onClick}>
-        <svg width={width} height={height} viewBox="0 0 1000 1000" style={style} >
+        <svg width={width} height={height} viewBox={viewBox} style={style} >
           <defs>
             <pattern id="img1" patternUnits="userSpaceOnUse" width={'60%'} height={'60%'}>
               <image xlinkHref={url} x="5%" y="5%" width={'60%'} height={'60%'} />

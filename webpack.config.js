@@ -9,7 +9,8 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, '/'),
-    filename: 'gittoken-react-components.dist.js'
+    filename: 'gittoken-react-components.dist.js',
+    publicPath: '/'
   },
   devServer: {
     historyApiFallback: true

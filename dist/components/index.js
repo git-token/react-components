@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Media = exports.Layout = exports.Account = undefined;
+exports.Legal = exports.Media = exports.Layout = exports.Account = undefined;
 
 var _index = require('./Layout/index');
 
@@ -17,8 +17,13 @@ var _index3 = require('./Media/index');
 
 var Media = _interopRequireWildcard(_index3);
 
+var _index4 = require('./Legal/index');
+
+var Legal = _interopRequireWildcard(_index4);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 exports.Account = Account;
 exports.Layout = Layout;
 exports.Media = Media;
+exports.Legal = Legal;

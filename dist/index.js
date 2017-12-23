@@ -23,9 +23,11 @@ var _store = require('./store');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Header = _index.Layout.Header;
-var HlsStream = _index.Media.HlsStream;
 
 
 _reactDom2.default.render(_jsx(_reactRouterDom.BrowserRouter, {}, void 0, _jsx(_reactRedux.Provider, {
   store: _store.store
-}, void 0, _jsx(_reactBootstrap.Grid, {}, void 0, _jsx(Header, {}), _jsx(HlsStream, {})))), document.getElementById('app'));
+}, void 0, _jsx(_reactBootstrap.Grid, {}, void 0, _jsx(Header, {}), _jsx(_reactRouterDom.Switch, {}, void 0, _jsx(_reactRouterDom.Route, {
+  path: '/account/setup',
+  component: _index.Account.Setup.Main
+}))))), document.getElementById('app'));

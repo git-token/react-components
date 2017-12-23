@@ -14,7 +14,6 @@ import {
 } from './components/index';
 
 const { Header } = Layout
-const { HlsStream } = Media
 
 import { store, history } from './store'
 
@@ -24,7 +23,9 @@ ReactDOM.render(
     <Provider store={store}>
         <Grid >
           <Header />
-          <HlsStream />
+          <Switch>
+            <Route path={'/account/setup'} component={Account.Setup.Main}/>
+          </Switch>
         </Grid>
     </Provider>
   </BrowserRouter>,
